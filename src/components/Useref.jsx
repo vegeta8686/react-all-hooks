@@ -1,13 +1,19 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 export const Useref = () => {
     const [name, setName] = useState('');
     const inputRef = useRef();
-    
+
+    useEffect(() => {
+        inputRef.current.style.border = 'solid 2px red';
+        inputRef.current.focus();
+    }, []);
+
     const changeColor = () => {
         inputRef.current.style.color = 'red';
         inputRef.current.style.border = 'solid 2px blue';
     };
+
     return (
         <div className='p-2'>
             <input type="text" ref={inputRef} value={name}
