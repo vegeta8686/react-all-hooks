@@ -5,6 +5,7 @@ import { Counter } from './components/useReducer/Counter';
 import { Useeffect } from './components/Useeffect';
 import { Useref } from './components/Useref';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Uselayouteffect } from './components/Uselayouteffect';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/todo" element={<CreateTodo />} />
           <Route path="/useEffect" element={<Useeffect />} />
           <Route path="/useRef" element={<Useref />} />
+          <Route path="/useLayoutEffect" element={<Uselayouteffect />} />
         </Routes>
       </Router>
     </div>
